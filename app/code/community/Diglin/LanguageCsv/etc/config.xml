@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Diglin
+ * @package    Diglin_LanguageCsv
+ * @author     Osdave <david . parloir AT gmail.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Diglin_LanguageCsv>
+            <version>0.2.0</version>
+        </Diglin_LanguageCsv>
+    </modules>
+
+    <admin>
+        <routers>
+            <languagecsv>
+                <use>admin</use>
+                <args>
+                    <module>Diglin_LanguageCsv</module>
+                    <frontName>languagecsv</frontName>
+                </args>
+            </languagecsv>
+        </routers>
+    </admin>
+
+    <global>
+        <models>
+            <languagecsv>
+                <class>Diglin_LanguageCsv_Model</class>
+                <resourceModel>languagecsv_mysql4</resourceModel>
+            </languagecsv>
+            <languagecsv_mysql4>
+                <class>Diglin_LanguageCsv_Model_Mysql4</class>
+            </languagecsv_mysql4>
+        </models>
+
+        <helpers>
+            <languagecsv>
+                <class>Diglin_LanguageCsv_Helper</class>
+            </languagecsv>
+        </helpers>
+
+        <blocks>
+            <languagecsv>
+                <class>Diglin_LanguageCsv_Block</class>
+            </languagecsv>
+        </blocks>
+    </global>
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <Diglin_LanguageCsv>
+                    <files>
+                        <default>Diglin_LanguageCsv.csv</default>
+                    </files>
+                </Diglin_LanguageCsv>
+            </modules>
+        </translate>
+
+        <layout>
+            <updates>
+                <tpv>
+                    <file>diglin/languagecsv.xml</file>
+                </tpv>
+            </updates>
+        </layout>
+    </adminhtml>
+
+    <default>
+        <dev>
+            <languagecsv>
+                <tree_depth>3</tree_depth>
+            </languagecsv>
+        </dev>
+    </default>
+</config>

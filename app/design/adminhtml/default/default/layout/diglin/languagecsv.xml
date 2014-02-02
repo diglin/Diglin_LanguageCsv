@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout>
+    <languagecsv_index_index>
+        <reference name="head">
+            <action method="addJs"><script>diglin/languagecsv.js</script></action>
+            <action method="addCss"><name>diglin/languagecsv.css</name></action>
+        </reference>
+
+        <reference name="content">
+            <block type="languagecsv/javascript" name="languagecsv_javascript" template="diglin/languagecsv/javascript.phtml"/>
+        </reference>
+    </languagecsv_index_index>
+</layout>

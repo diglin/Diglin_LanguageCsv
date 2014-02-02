@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Diglin
+ * @package    Diglin_LanguageCsv
+ * @author     Osdave <david . parloir AT gmail.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <menu>
+        <system>
+            <children>
+                <tools>
+                    <children>
+                        <languagecsv translate="title" module="languagecsv">
+                            <title>Language csv</title>
+                            <action>languagecsv/index</action>
+                            <sort_order>1100</sort_order>
+                        </languagecsv>
+                    </children>
+                </tools>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <tools>
+                                <children>
+                                    <languagecsv translate="title" module="languagecsv">
+                                        <title>Language csv</title>
+                                    </languagecsv>
+                                </children>
+                            </tools>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

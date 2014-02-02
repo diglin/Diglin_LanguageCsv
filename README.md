@@ -1,8 +1,10 @@
 Diglin LanguageCsv
 ==================
 
-Magento module to extract strings to be translated of your module from PHP and XML files like layout files, config.xml, system.xml, ...
-This module is based on the original module of OSDave https://bitbucket.org/OSdave/languagecsv. My version improves some behavior and fixes some bug (refer to the changelog).
+Developer Magento module to extract strings to be translated of your module from PHP and XML files like layout files, config.xml, system.xml, ...
+
+This module is based on the original module of OSDave https://bitbucket.org/OSdave/languagecsv.
+My version improves some behavior and fixes some bug (refer to the changelog).
 
 # Documentation #
 

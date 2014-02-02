@@ -1,0 +1,50 @@
+<?php $modules = $this->getModulesList(); ?>
+<?php $adminTemplates = $this->getTemplateFolders('adminhtml'); ?>
+<?php $frontendTemplates = $this->getTemplateFolders('frontend'); ?>
+<div id="module_selector_div" style="display: none;">
+    <form id="module_selector" name="module_selector" method="GET" action="<?php echo $this->getCreateFileUrl(); ?>">
+        <label for="module"><?php echo $this->__('Select a module:') ?><em>*</em></label>
+        <select name="module" class="required-entry">
+            <option value=""></option>
+            <?php foreach ($modules as $module): ?>
+            <option value="<?php echo $module; ?>"><?php echo $module; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <label for="adminhtml"><?php echo $this->__('Select an admin template folder:') ?></label>
+        <select name="adminhtml">
+            <option value=""></option>
+	    <?php for ($i=0; $i<sizeof($adminTemplates); $i++): ?>
+		<?php foreach ($adminTemplates[$i] as $template => $folders): ?>
+		<optgroup label="<?php echo $template; ?>">
+		    <?php foreach ($folders as $folder): ?>
+		    <option value="<?php echo $folder['value']; ?>" class="depth-<?php echo $folder['depth']; ?>"><?php echo $folder['label']; ?></option>
+		    <?php endforeach; ?>
+		</optgroup>
+		<?php endforeach; ?>
+	    <?php endfor; ?>
+        </select>
+        <label for="frontend"><?php echo $this->__('Select a frontend template folder:') ?></label>
+        <select name="frontend">
+            <option value=""></option>
+	    <?php for ($i=0; $i<sizeof($frontendTemplates); $i++): ?>
+		<?php foreach ($frontendTemplates[$i] as $template => $folders): ?>
+		<optgroup label="<?php echo $template; ?>">
+		    <?php foreach ($folders as $folder): ?>
+		    <option value="<?php echo $folder['value']; ?>" class="depth-<?php echo $folder['depth']; ?>"><?php echo $folder['label']; ?></option>
+		    <?php endforeach; ?>
+		</optgroup>
+		<?php endforeach; ?>
+	    <?php endfor; ?>
+        </select>
+        <button class="scalable" type="button" onclick="selectModule.submit()">
+            <span><?php echo $this->__('Submit'); ?></span>
+        </button>
+    </form>
+</div>
+<script type="text/javascript">
+    //<![CDATA[
+    var csvFile = new LanguageCsv();
+
+    var selectModule = new varienForm('module_selector');
+    //]]>
+</script>
