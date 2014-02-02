@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Diglin_LanguageCsv>
-            <version>0.2.0</version>
+            <version>1.0.0</version>
         </Diglin_LanguageCsv>
     </modules>
 

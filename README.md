@@ -12,6 +12,38 @@ My version improves some behavior and fixes some bug (refer to the changelog).
 
 - Use modman `modman clone https://github.com/diglin/Diglin_LanguageCsv.git`
 
+### Via modman
+- Install [modman](https://github.com/colinmollenhour/modman)
+- Use the command from your Magento installation folder: `modman clone https://github.com/diglin/Diglin_LanguageCsv.git`
+
+### Via composer
+- Install [composer](http://getcomposer.org/download/)
+- Create a composer.json into your project like the following sample:
+
+```json
+{
+    ...
+    "require": {
+        "diglin/diglin_languagecsv":"*"
+    },
+    "repositories": [
+	    {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        }
+    ],
+    "extra":{
+        "magento-root-dir": "./"
+    }
+}
+
+```
+
+- Then from your composer.json folder: `php composer.phar install` or `composer install`
+
+### Manually
+- You can copy the files from the folders of this repository to the same folders of your installation
+
 ## Use ##
 
 - After to have refresh your cache and to have log out / log in from the backend, 

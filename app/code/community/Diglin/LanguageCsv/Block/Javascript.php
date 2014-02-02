@@ -37,7 +37,7 @@ class Diglin_LanguageCsv_Block_Javascript extends Mage_Adminhtml_Block_Abstract
 
     public function getModulesList()
     {
-        $modules = array_keys((array) Mage::getConfig()->getNode('modules')->children());
+        $modules = array_keys((array) Mage::getConfig()->getModuleConfig());
         
         sort($modules);
         
@@ -67,8 +67,11 @@ class Diglin_LanguageCsv_Block_Javascript extends Mage_Adminhtml_Block_Abstract
                         $containerFolderPath = $rootFolderPath . $package . DS . $theme . DS . 'template' . DS;
                         if (is_dir($containerFolderPath)) { //app/design/adminhtml_or_frontend/package/theme/template/
                             $this->_modulesFolders = array(); //reinitiate
-                            $folders[] = $this->_getModulesFolders($containerFolderPath, $package, $theme);
-                            sort($folders[sizeof($folders) - 1][$package . DS . $theme]);
+                            $modulesFolder = $this->_getModulesFolders($containerFolderPath, $package, $theme);
+                            if (!empty($modulesFolder)) {
+                                $folders[] = $modulesFolder;
+                                sort($folders[sizeof($folders) - 1][$package . DS . $theme]);
+                            }
                         }
                     }
                 }
