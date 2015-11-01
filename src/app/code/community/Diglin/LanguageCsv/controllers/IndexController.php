@@ -24,7 +24,7 @@
  *
  * @author david
  */
-class Diglin_LanguageCsv_IndexController extends Mage_Adminhtml_Controller_Action
+class Diglin_LanguageCsv_Adminhtml_Languagecsv_IndexController extends Mage_Adminhtml_Controller_Action
 {
 
     /**

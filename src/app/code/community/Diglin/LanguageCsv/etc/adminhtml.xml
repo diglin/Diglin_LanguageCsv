@@ -15,7 +15,7 @@
                     <children>
                         <languagecsv translate="title" module="languagecsv">
                             <title>Language csv</title>
-                            <action>languagecsv/index</action>
+                            <action>adminhtml/languagecsv_index</action>
                             <sort_order>1100</sort_order>
                         </languagecsv>
                     </children>
